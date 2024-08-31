@@ -1,2 +1,4 @@
-// Import styles, initialize component theme here.
-// import '../src/common.css';
+import { setProjectAnnotations } from "@storybook/react";
+import previewAnnotations from "../.storybook/preview";
+
+setProjectAnnotations(previewAnnotations);

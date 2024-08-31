@@ -10,8 +10,9 @@ const meta: Meta<typeof App> = {
 export default meta;
 type Story = StoryObj<typeof App>;
 
-export const Primary: Story = {
-  render: () => <App />,
+export const Default: Story = {};
+
+export const DefaultPlay: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 

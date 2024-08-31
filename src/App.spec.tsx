@@ -1,6 +1,7 @@
-import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+/// <reference types="@vitest/browser/providers/playwright" />
+
+import { act, render, screen } from "@testing-library/react";
+import { userEvent } from "@vitest/browser/context";
 import { expect, test } from "vitest";
 import App from "./App";
 
@@ -9,7 +10,9 @@ test("button click updates count", async () => {
 
   const button = screen.getByRole("button");
 
-  await userEvent.click(button);
+  await act(async () => {
+    await userEvent.click(button);
+  });
 
   expect(button).toHaveTextContent("count is 1");
 });
