@@ -6,11 +6,15 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   plugins: [react()],
   test: {
+    setupFiles: ['vitest-browser-react'],
+    includeSource: ['src/**/*.{ts,tsx}'], 
     browser: {
       enabled: true,
       provider: "playwright",
       name: "chromium",
-      headless: true,
     },
   },
+  define: { 
+    'import.meta.vitest': 'undefined', 
+  }, 
 });

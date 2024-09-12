@@ -1,18 +1,13 @@
-/// <reference types="@vitest/browser/providers/playwright" />
-
-import { act, render, screen } from "@testing-library/react";
-import { userEvent } from "@vitest/browser/context";
 import { expect, test } from "vitest";
+import { page } from "@vitest/browser/context";
 import App from "./App";
 
 test("button click updates count", async () => {
-  render(<App />);
+  const screen = page.render(<App />);
 
-  const button = screen.getByRole("button");
+  await screen.getByRole("button").click();
 
-  await act(async () => {
-    await userEvent.click(button);
-  });
-
-  expect(button).toHaveTextContent("count is 1");
+  await expect
+    .element(screen.getByRole("button"))
+    .toHaveTextContent("count is 1");
 });

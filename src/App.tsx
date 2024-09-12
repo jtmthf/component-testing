@@ -33,3 +33,17 @@ function App() {
 }
 
 export default App;
+
+if (import.meta.vitest) {
+  const { test, expect } = import.meta.vitest;
+
+  test("button click updates count", async () => {
+    const { page } = await import('@vitest/browser/context')
+
+    const screen = page.render(<App />);
+
+    await screen.getByRole("button").click();
+
+    await expect.element(screen.getByRole("button")).toHaveTextContent("count is 1");
+  });
+}
