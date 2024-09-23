@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@eslint/compat": "^1.1.1",
-    "@playwright/experimental-ct-react": "^1.47.1",
-    "@playwright/test": "^1.47.1",
+    "@playwright/experimental-ct-react": "^1.47.2",
+    "@playwright/test": "^1.47.2",
     "@storybook/addon-essentials": "^8.3.2",
     "@storybook/addon-interactions": "^8.3.2",
     "@storybook/addon-links": "^8.3.2",
@@ -42,17 +42,17 @@
     "@vitest/browser": "^2.1.1",
     "@vitest/ui": "^2.1.1",
     "cypress": "^13.14.2",
-    "eslint": "^9.10.0",
+    "eslint": "^9.11.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.12",
     "eslint-plugin-storybook": "^0.8.0",
     "globals": "^15.9.0",
-    "playwright": "^1.47.1",
+    "playwright": "^1.47.2",
     "storybook": "^8.3.2",
     "typescript": "^5.6.2",
-    "vite": "^5.4.6",
+    "vite": "^5.4.7",
     "vitest": "^2.1.1",
     "vitest-browser-react": "^0.0.1"
   },
-  "packageManager": "pnpm@9.9.0"
+  "packageManager": "pnpm@9.11.0"
 }
