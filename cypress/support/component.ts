@@ -20,6 +20,7 @@ import "./commands";
 // require('./commands')
 
 import { mount } from "cypress/react18";
+import { addMatchImageSnapshotCommand } from "@simonsmith/cypress-image-snapshot/command";
 
 // Augment the Cypress namespace to include type definitions for
 // your custom command.
@@ -35,6 +36,8 @@ declare global {
 }
 
 Cypress.Commands.add("mount", mount);
+
+addMatchImageSnapshotCommand();
 
 // Example use:
 // cy.mount(<MyComponent />)

@@ -13,4 +13,10 @@ describe("<App />", () => {
     // expect count to be 1
     cy.get("button").contains("count is 1");
   });
+
+  it("matches snapshot", () => {
+    cy.mount(<App />);
+
+    cy.matchImageSnapshot("app");
+  });
 });

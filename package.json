@@ -24,6 +24,7 @@
     "@eslint/compat": "^1.2.1",
     "@playwright/experimental-ct-react": "^1.48.1",
     "@playwright/test": "^1.48.1",
+    "@simonsmith/cypress-image-snapshot": "^9.1.0",
     "@storybook/addon-essentials": "^8.3.6",
     "@storybook/addon-interactions": "^8.3.6",
     "@storybook/addon-links": "^8.3.6",
