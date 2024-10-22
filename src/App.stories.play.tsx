@@ -14,3 +14,9 @@ test("should work", async ({ mount, page }) => {
   // expect count to be 1
   await expect(page.getByRole("button")).toHaveText(/count is 1/);
 });
+
+test("matches snapshot", async ({ mount }) => {
+  const component = await mount(<stories.Default />);
+
+  await expect(component).toHaveScreenshot();
+});

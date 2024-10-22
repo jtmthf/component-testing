@@ -10,3 +10,9 @@ test("should work", async ({ mount }) => {
   // expect count to be 1
   await expect(component.getByRole("button")).toHaveText(/count is 1/);
 });
+
+test("matches snapshot", async ({ mount }) => {
+  const component = await mount(<App />);
+
+  await expect(component).toHaveScreenshot();
+});
