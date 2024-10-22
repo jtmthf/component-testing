@@ -17,15 +17,15 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ["**/dist", "playwright/.cache/**"],
+    ignores: ["**/dist", "playwright/.cache/**", "storybook-static/**"],
   },
   ...fixupConfigRules(
     compat.extends(
       "eslint:recommended",
       "plugin:@typescript-eslint/recommended",
       "plugin:react-hooks/recommended",
-      "plugin:storybook/recommended",
-    ),
+      "plugin:storybook/recommended"
+    )
   ),
   {
     plugins: {
