@@ -13,7 +13,7 @@
     "test:vitest": "pnpm vitest run",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test:storybook": "test-storybook",
+    "test:storybook": "test-storybook  --browsers chromium firefox webkit",
     "test": "pnpm --stream /^test:.*/"
   },
   "dependencies": {
@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.1",
-    "@playwright/experimental-ct-react": "^1.48.1",
-    "@playwright/test": "^1.48.1",
+    "@playwright/experimental-ct-react": "^1.50.1",
+    "@playwright/test": "^1.50.1",
     "@simonsmith/cypress-image-snapshot": "^9.1.0",
     "@storybook/addon-essentials": "^8.5.5",
     "@storybook/addon-links": "^8.5.5",
@@ -47,7 +47,7 @@
     "eslint-plugin-react-refresh": "^0.4.13",
     "eslint-plugin-storybook": "^0.11.2",
     "globals": "^15.11.0",
-    "playwright": "^1.48.1",
+    "playwright": "^1.50.1",
     "storybook": "^8.5.5",
     "typescript": "^5.6.3",
     "vite": "^6.1.0",
