@@ -1,5 +1,5 @@
 import { test, expect } from "vitest";
-import { page } from "@vitest/browser/context";
+import { render } from "vitest-browser-react";
 import { composeStories } from "@storybook/react";
 
 import * as stories from "./App.stories";
@@ -7,7 +7,7 @@ import * as stories from "./App.stories";
 const { Default, DefaultPlay } = composeStories(stories);
 
 test("button click updates count", async () => {
-  const screen = page.render(<Default />);
+  const screen = render(<Default />);
 
   await screen.getByRole("button").click();
 

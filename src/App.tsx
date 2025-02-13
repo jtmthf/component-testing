@@ -38,9 +38,9 @@ if (import.meta.vitest) {
   const { test, expect } = import.meta.vitest;
 
   test("button click updates count", async () => {
-    const { page } = await import("@vitest/browser/context");
+    const { render } = await import("vitest-browser-react");
 
-    const screen = page.render(<App />);
+    const screen = render(<App />);
 
     await screen.getByRole("button").click();
 

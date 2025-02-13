@@ -1,9 +1,9 @@
 import { expect, test } from "vitest";
-import { page } from "@vitest/browser/context";
+import { render } from "vitest-browser-react";
 import App from "./App";
 
 test("button click updates count", async () => {
-  const screen = page.render(<App />);
+  const screen = render(<App />);
 
   await screen.getByRole("button").click();
 
