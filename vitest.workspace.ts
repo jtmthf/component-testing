@@ -11,8 +11,12 @@ export default defineWorkspace([
       browser: {
         enabled: true,
         provider: "playwright",
-        name: "chromium",
         headless: true,
+        instances: [
+          { browser: "chromium" },
+          { browser: "firefox" },
+          { browser: "webkit" },
+        ],
       },
     },
   },
@@ -29,8 +33,12 @@ export default defineWorkspace([
       browser: {
         enabled: true,
         provider: "playwright",
-        name: "chromium",
         headless: true,
+        instances: [
+          { browser: "chromium" },
+          { browser: "firefox" },
+          { browser: "webkit" },
+        ],
       },
     },
   },
